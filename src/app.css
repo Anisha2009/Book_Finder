@@ -1,0 +1,136 @@
+/* App.css */
+
+/* ==== Global styles ==== */
+body {
+  background: linear-gradient(135deg, #f0f4f8 0%, #e2e8f0 100%);
+  font-family: "Poppins", "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #1f2937;
+}
+
+/* ==== App container ==== */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+/* Book Icon next to title */
+.book-icon {
+  color: #1e3a8a; /* deep blue */
+  font-size: 2.2rem;
+  margin-right: 10px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+
+.app-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.app-title:hover .book-icon {
+  transform: rotate(-10deg) scale(1.1);
+}
+
+
+/* ==== Title ==== */
+.app-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: #1e3a8a;
+  margin-bottom: 40px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* ==== Search Section (Improved layout) ==== */
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+  gap: 12px; /* space between input and button */
+  flex-wrap: wrap; /* responsive for small screens */
+}
+
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  width: 400px;
+  max-width: 90%;
+}
+
+.search-wrapper:focus-within {
+  border: 2px solid #3b82f6;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+}
+
+.search-icon {
+  padding: 0 14px;
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+.search-input {
+  flex: 1;
+  padding: 14px 16px;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  background: transparent;
+  color: #1f2937;
+}
+
+.search-input::placeholder {
+  color: #9ca3af;
+}
+
+/* Standalone button */
+.search-button {
+  background: linear-gradient(135deg, #3b82f6, #2563eb);
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 13px 32px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(37, 99, 235, 0.3);
+}
+
+.search-button:hover {
+  transform: translateY(-2px);
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  box-shadow: 0 6px 14px rgba(37, 99, 235, 0.45);
+}
+.status-text {
+  text-align: center;
+  font-size: 1rem;
+  color: #4b5563;
+  margin-top: 10px;
+}
+
+/* ==== Scrollbar (optional) ==== */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #9ca3af;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6b7280;
+}
